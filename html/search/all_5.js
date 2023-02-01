@@ -5,5 +5,6 @@ var searchData=
   ['sequence_2eh_2',['Sequence.h',['../_sequence_8h.html',1,'']]],
   ['statistics_3',['Statistics',['../class_statistics.html',1,'']]],
   ['statistics_2ecpp_4',['Statistics.cpp',['../_statistics_8cpp.html',1,'']]],
-  ['statistics_2eh_5',['Statistics.h',['../_statistics_8h.html',1,'']]]
+  ['statistics_2eh_5',['Statistics.h',['../_statistics_8h.html',1,'']]],
+  ['strona_20główna_6',['Strona główna',['../index.html',1,'']]]
 ];
