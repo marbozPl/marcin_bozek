@@ -1,42 +1,50 @@
-/**
- * @class Statistics
- * @brief Represents a set of statistical values.
- *
- * The Statistics class provides a representation of a set of statistical
- * values. The class has a default constructor, a copy constructor, and a
- * destructor. The class also provides functions for adding values to the set
- * and calculating various statistical measures, such as the mean and median.
- *
- * @author Marcin Bożek
- * @date 01.02.2023
- */
-class Statistics {
-public:
-  /**
-   * @brief Default constructor.
-   *
-   * Creates an empty set of statistical values.
-   */
-  Statistics();
+#include "Statistics.h"
 
-  /**
-   * @brief Copy constructor.
-   *
-   * Creates a copy of the given set of statistical values.
-   *
-   * @param[in] other The set of statistical values to copy.
-   */
-  Statistics(const Statistics& other);
+Statistics::Statistics() : count(0), values(nullptr) {}
 
-  /**
-   * @brief Destructor.
-   *
-   * Deallocates the memory used by the set of statistical values.
-   */
-  ~Statistics();
+Statistics::Statistics(const Statistics& stats) {
+  count = stats.count;
+  values = new int[count];
+  for (int i = 0; i < count; i++) {
+    values[i] = stats.values[i];
+  }
+}
 
-  /**
-   * @brief Adds a value to the set.
-   *
-   * @param[in] value The value to add to the set.
-   */
+Statistics::~Statistics() {
+  delete[] values;
+}
+
+int Statistics::getCount() {
+  return count;
+}
+
+int Statistics::getValue(int index) {
+  return values[index];
+void Statistics::addValue(int value) {
+  int* newValues = new int[count + 1];
+  for (int i = 0; i < count; i++) {
+    newValues[i] = values[i];
+  }
+  newValues[count] = value;
+  delete[] values;
+  values = newValues;
+  count++;
+}
+
+int Statistics::mean() {
+  int total = 0;
+  for (int i = 0; i < count; i++) {
+    total += values[i];
+  }
+  return total / count;
+}
+
+int Statistics::median() {
+  // Sorting the values array
+  // ...
+  
+  // Calculating the median value
+  // ...
+  
+  return 0; // placeholder
+}

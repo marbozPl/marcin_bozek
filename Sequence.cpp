@@ -1,64 +1,35 @@
-/**
- * @class Sequence
- * @brief Represents a sequence of integers.
- *
- * The Sequence class provides a representation of a sequence of integers. The
- * class has a default constructor, a copy constructor, and a destructor. The
- * class also provides functions for accessing and modifying the elements of
- * the sequence.
- *
- * @author Marcin Bożek
- * @date 01.02.2023
- */
-class Sequence {
-public:
-  /**
-   * @brief Default constructor.
-   *
-   * Creates an empty sequence.
-   */
-  Sequence();
+#include "Sequence.h"
 
-  /**
-   * @brief Copy constructor.
-   *
-   * Creates a copy of the given sequence.
-   *
-   * @param[in] other The sequence to copy.
-   */
-  Sequence(const Sequence& other);
+Sequence::Sequence() : length(0), values(nullptr) {}
 
-  /**
-   * @brief Destructor.
-   *
-   * Deallocates the memory used by the sequence.
-   */
-  ~Sequence();
+Sequence::Sequence(const Sequence& seq) {
+  length = seq.length;
+  values = new int[length];
+  for (int i = 0; i < length; i++) {
+    values[i] = seq.values[i];
+  }
+}
 
-  /**
-   * @brief Gets the number of elements in the sequence.
-   *
-   * @return The number of elements in the sequence.
-   */
-  int getLength() const;
+Sequence::~Sequence() {
+  delete[] values;
+}
 
-  /**
-   * @brief Gets the element at the given index.
-   *
-   * @param[in] index The index of the element to retrieve.
-   * @return The element at the given index.
-   */
-  int getElement(int index) const;
+int Sequence::getLength() {
+  return length;
+}
 
-  /**
-   * @brief Sets the element at the given index.
-   *
-   * @param[in] index The index of the element to set.
-   * @param[in] value The value to set the element to.
-   */
-  void setElement(int index, int value);
+int Sequence::getValue(int index) {
+  return values[index];
+}
 
-private:
-  int length;   /**< The number of elements in the sequence. */
-  int* elements; /**< The elements of the sequence. */
-};
+void Sequence::setValue(int index, int value) {
+  values[index] = value;
+}
+
+int Sequence::sum() {
+  int total = 0;
+  for (int i = 0; i < length; i++) {
+    total += values[i];
+  }
+  return total;
+}
