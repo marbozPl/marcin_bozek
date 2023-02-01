@@ -1,35 +1,61 @@
+/*!
+
+\file Sequence.cpp
+\brief Plik źródłowy klasy Sequence
+Plik zawiera implementację klasy Sequence.
+*/
 #include "Sequence.h"
 
-Sequence::Sequence() : length(0), values(nullptr) {}
+/*!
 
-Sequence::Sequence(const Sequence& seq) {
-  length = seq.length;
-  values = new int[length];
-  for (int i = 0; i < length; i++) {
-    values[i] = seq.values[i];
-  }
+\brief Konstruktor domyślny.
+Tworzy pustą sekwencję.
+*/
+template<typename T>
+Sequence<T>::Sequence() {}
+/*!
+
+\brief Konstruktor kopiujący.
+Tworzy kopię sekwencji.
+\param seq Sekwencja do skopiowania.
+*/
+template<typename T>
+Sequence<T>::Sequence(const Sequence& seq) : data_(seq.data_) {}
+/*!
+
+\brief Destruktor.
+Zwalnia pamięć zarezerwowaną przez sekwencję.
+*/
+template<typename T>
+Sequence<T>::~Sequence() {}
+/*!
+
+\brief Funkcja dodająca element do sekwencji.
+Dodaje nowy element do sekwencji.
+\param element Element do dodania.
+*/
+template<typename T>
+void Sequence<T>::AddElement(const T& element) {
+data_.push_back(element);
 }
+/*!
 
-Sequence::~Sequence() {
-  delete[] values;
+\brief Funkcja zwracająca element sekwencji o danym indeksie.
+Zwraca element sekwencji o danym indeksie.
+\param index Indeks elementu.
+\return Element sekwencji o indeksie index.
+*/
+template<typename T>
+T Sequence<T>::GetElement(int index) const {
+return data_.at(index);
 }
+/*!
 
-int Sequence::getLength() {
-  return length;
-}
-
-int Sequence::getValue(int index) {
-  return values[index];
-}
-
-void Sequence::setValue(int index, int value) {
-  values[index] = value;
-}
-
-int Sequence::sum() {
-  int total = 0;
-  for (int i = 0; i < length; i++) {
-    total += values[i];
-  }
-  return total;
+\brief Funkcja zwracająca długość sekwencji.
+Zwraca liczbę elementów w sekwencji.
+\return Długość sekwencji.
+*/
+template<typename T>
+int Sequence<T>::GetLength() const {
+return data_.size();
 }

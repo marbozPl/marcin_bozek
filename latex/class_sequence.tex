@@ -1,0 +1,158 @@
+\hypertarget{class_sequence}{}\doxysection{Sequence\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_sequence}\index{Sequence$<$ T $>$@{Sequence$<$ T $>$}}
+
+
+Klasa reprezentująca sekwencję danych.  
+
+
+
+
+{\ttfamily \#include $<$Sequence.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sequence_a749c8ebd329be663da6965d4abe779ec}{Sequence}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sequence_a164171d874bee486d2c10c9be67b4368}{Sequence}} (const \mbox{\hyperlink{class_sequence}{Sequence}} \&seq)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sequence_a369c25ce74e7fcfc0d5e7257a77aa260}{$\sim$\+Sequence}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sequence_a794c3e0379871a0bd00045cbcd837933}{Add\+Element}} (const T \&element)
+\begin{DoxyCompactList}\small\item\em Funkcja dodająca element do sekwencji. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_sequence_adbb2ddcb193d878a4570f7d3a6f8c407}{Get\+Element}} (int index) const
+\begin{DoxyCompactList}\small\item\em Funkcja zwracająca element sekwencji o danym indeksie. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sequence_a764c8cccaed461b0f3782da42f1be62d}{Get\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Funkcja zwracająca długość sekwencji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Sequence$<$ T $>$}
+Klasa reprezentująca sekwencję danych. 
+
+Klasa umożliwia przechowywanie sekwencji danych oraz wykonywanie na nich różnego rodzaju operacji. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sequence_a749c8ebd329be663da6965d4abe779ec}\label{class_sequence_a749c8ebd329be663da6965d4abe779ec}} 
+\index{Sequence$<$ T $>$@{Sequence$<$ T $>$}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!Sequence$<$ T $>$@{Sequence$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sequence}{Sequence}}$<$ T $>$\mbox{\hyperlink{class_sequence}{\+::\+Sequence}}}
+
+
+
+Konstruktor domyślny. 
+
+Konstruktor domyślny. Tworzy pustą sekwencję.
+
+Tworzy pustą sekwencję. \mbox{\Hypertarget{class_sequence_a164171d874bee486d2c10c9be67b4368}\label{class_sequence_a164171d874bee486d2c10c9be67b4368}} 
+\index{Sequence$<$ T $>$@{Sequence$<$ T $>$}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!Sequence$<$ T $>$@{Sequence$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sequence}{Sequence}}$<$ T $>$\mbox{\hyperlink{class_sequence}{\+::\+Sequence}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sequence}{Sequence}}$<$ T $>$ \&}]{seq }\end{DoxyParamCaption})}
+
+
+
+Konstruktor kopiujący. 
+
+Konstruktor kopiujący. Tworzy kopię sekwencji.
+
+Tworzy kopię sekwencji. 
+\begin{DoxyParams}{Parameters}
+{\em seq} & Sekwencja do skopiowania.\\
+\hline
+{\em seq} & Sekwencja do skopiowania. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sequence_a369c25ce74e7fcfc0d5e7257a77aa260}\label{class_sequence_a369c25ce74e7fcfc0d5e7257a77aa260}} 
+\index{Sequence$<$ T $>$@{Sequence$<$ T $>$}!````~Sequence@{$\sim$Sequence}}
+\index{````~Sequence@{$\sim$Sequence}!Sequence$<$ T $>$@{Sequence$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Sequence()}{~Sequence()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sequence}{Sequence}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_sequence}{Sequence}}}
+
+
+
+Destruktor. 
+
+Destruktor. Zwalnia pamięć zarezerwowaną przez sekwencję.
+
+Zwalnia pamięć zarezerwowaną przez sekwencję. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sequence_a794c3e0379871a0bd00045cbcd837933}\label{class_sequence_a794c3e0379871a0bd00045cbcd837933}} 
+\index{Sequence$<$ T $>$@{Sequence$<$ T $>$}!AddElement@{AddElement}}
+\index{AddElement@{AddElement}!Sequence$<$ T $>$@{Sequence$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AddElement()}{AddElement()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_sequence}{Sequence}}$<$ T $>$\+::\+Add\+Element (\begin{DoxyParamCaption}\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+
+
+Funkcja dodająca element do sekwencji. 
+
+Funkcja dodająca element do sekwencji. Dodaje nowy element do sekwencji.
+
+Dodaje nowy element do sekwencji. 
+\begin{DoxyParams}{Parameters}
+{\em element} & Element do dodania.\\
+\hline
+{\em element} & Element do dodania. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sequence_adbb2ddcb193d878a4570f7d3a6f8c407}\label{class_sequence_adbb2ddcb193d878a4570f7d3a6f8c407}} 
+\index{Sequence$<$ T $>$@{Sequence$<$ T $>$}!GetElement@{GetElement}}
+\index{GetElement@{GetElement}!Sequence$<$ T $>$@{Sequence$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetElement()}{GetElement()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_sequence}{Sequence}}$<$ T $>$\+::\+Get\+Element (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Funkcja zwracająca element sekwencji o danym indeksie. 
+
+Funkcja zwracająca element sekwencji o danym indeksie. Zwraca element sekwencji o danym indeksie.
+
+Zwraca element sekwencji o danym indeksie. 
+\begin{DoxyParams}{Parameters}
+{\em index} & Indeks elementu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element sekwencji o indeksie index.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indeks elementu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element sekwencji o indeksie index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sequence_a764c8cccaed461b0f3782da42f1be62d}\label{class_sequence_a764c8cccaed461b0f3782da42f1be62d}} 
+\index{Sequence$<$ T $>$@{Sequence$<$ T $>$}!GetLength@{GetLength}}
+\index{GetLength@{GetLength}!Sequence$<$ T $>$@{Sequence$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetLength()}{GetLength()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_sequence}{Sequence}}$<$ T $>$\+::\+Get\+Length}
+
+
+
+Funkcja zwracająca długość sekwencji. 
+
+Funkcja zwracająca długość sekwencji. Zwraca liczbę elementów w sekwencji.
+
+Zwraca liczbę elementów w sekwencji. \begin{DoxyReturn}{Returns}
+Długość sekwencji.
+
+Długość sekwencji. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sequence_8h}{Sequence.\+h}}\item 
+\mbox{\hyperlink{_sequence_8cpp}{Sequence.\+cpp}}\end{DoxyCompactItemize}

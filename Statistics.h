@@ -1,31 +1,39 @@
+/*!
+
+\file Statistics.h
+\brief Plik nagłówkowy klasy Statistics
+Plik zawiera deklarację klasy Statistics, która jest odpowiedzialna za
+obliczenia statystyczne na sekwencjach danych.
+*/
 #ifndef STATISTICS_H
 #define STATISTICS_H
 
 #include "Sequence.h"
 
-class Statistics {
- public:
-  // Default constructor
-  Statistics();
-  
-  // Copy constructor
-  Statistics(const Statistics& stats);
-  
-  // Destructor
-  ~Statistics();
-  
-  // Accessor functions
-  int getCount();
-  int getValue(int index);
-  
-  // Computational functions
-  void addValue(int value);
-  int mean();
-  int median();
-  
- private:
-  int count;
-  int* values;
-};
+/*!
 
+\class Statistics
+\brief Klasa obliczająca statystyki na sekwencjach danych.
+Klasa umożliwia obliczenie statystyk na sekwencjach danych, takich jak
+średnia, odchylenie standardowe, itp.
+/
+template<typename T>
+class Statistics {
+public:
+/!
+\brief Funkcja obliczająca średnią arytmetyczną.
+Oblicza średnią arytmetyczną dla danej sekwencji.
+\param seq Sekwencja danych.
+\return Średnia arytmetyczna.
+*/
+static T Mean(const Sequence<T>& seq);
+/*!
+
+\brief Funkcja obliczająca odchylenie standardowe.
+Oblicza odchylenie standardowe dla danej sekwencji.
+\param seq Sekwencja danych.
+\return Odchylenie standardowe.
+*/
+static T StandardDeviation(const Sequence<T>& seq);
+};
 #endif // STATISTICS_H
